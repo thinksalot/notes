@@ -128,10 +128,16 @@ Deletes a tag, leaving behind only surrounding elements
 
 `:5,10norm! @a` which runs the macro stored in register `@a` from line `5` to `10` in normal mode. [[src]] (http://stackoverflow.com/a/390194)
 
----
 
 [Sparkup](https://github.com/rstacruz/sparkup):
 ===
 
-### Expansion key: `<Ctrl-e>`
+### Expansion key: 
+`<Ctrl-e>`
 
+
+[Surround:](https://github.com/tpope/vim-surround)
+===
+1. Select the letter, word or line in visual mode.
+2. Press `S`
+3. Press character to surround with
