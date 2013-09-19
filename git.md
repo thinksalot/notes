@@ -9,5 +9,5 @@ Git commands
 `git checkout -- *` discards all changes to working directory
 
 ### Remove untracked files and directories:
-`git clean -fd`
+`git clean -fd` - `d` flag removes untracked directories in addition to untracked files, `f` means force , depends upon `clean.requireForce` config
 
