@@ -3,6 +3,10 @@ A list of very useful commands after you are past the initial learning curve.
 General Vim:
 ===
 
+### Read help for a command
+
+`:help <command>` show help info for a command
+
 ### Reload vim config:
 
 * ` :tabedit ~/.vimrc ` and do ` :so % ` where `%` stands for current file
@@ -79,6 +83,10 @@ In insert more,`Ctrl-o` immediately followed by `A`
 * to replace every occurrence of OLD to NEW on current file `:%s/OLD/NEW/g`
 
 [[src]](http://linuxwave.blogspot.com/2008/05/replacing-words-in-vi.html)
+
+### Turnoff highlight after a search is done
+
+`:nohl` Turns off highlight of a previous search if using `set hlsearch` in .vimrc
 
 ### To search and replace value under the cursor:
 
