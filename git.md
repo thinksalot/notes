@@ -34,9 +34,11 @@ Git commands
 ### Undo (committed) changes to tracked files:
 `git reset --soft HEAD~1` 
 
-Resets the `HEAD` to secondlast commit (specified here by `HEAD~1` indicated the second last commit)
+Resets the `HEAD` to secondlast commit (specified here by `HEAD~1`)
 
-`--soft` indicates to leave the changed files untouched
+`--soft` means to leave the changed files untouched. 
+
+Using `--hard ` instead removes the changes in file aswell (ie modifies index).
 
 ### Remove untracked files and directories:
 `git clean -fd` - `d` flag removes untracked directories in addition to untracked files, `f` means force , depends upon `clean.requireForce` config
