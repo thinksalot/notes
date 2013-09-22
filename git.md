@@ -45,4 +45,4 @@ Using `--hard ` instead removes the changes in file aswell (ie modifies index).
 
 
 ### Undo last (pushed) commit
-`git revert HEAD` This will reverse the effects of an earlier commit (often a faulty one) and record a new commit.
+`git revert HEAD` This will reverse the effects of an earlier commit (often a faulty one) and record a new commit. The faulty commit will remain in the log list.
