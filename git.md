@@ -1,6 +1,29 @@
 Git reference
 ===
 
+### HEAD
+
+`HEAD` is the reference to the most recent commit.In other words, `HEAD` is the parent of the next commit.
+
+`HEAD` is the tip of the commit in current branch.
+
+We can view where `HEAD` points to using:
+
+```
+$ cat .git/HEAD
+ref: refs/heads/master
+$ cat .git/refs/heads/master
+eb7e1080e7843a7a2597e6643bde64cc19b50e4e
+```
+
+### Working tree
+
+It is the state of files we are currently working on.
+
+Working tree is same as working directory.
+
+We can view where `HEAD` had previously pointed to using: `git reflog`
+
 ### Index
 Index is a staging area between working tree and the repository.
 
@@ -18,8 +41,6 @@ When we run `git status` we see a list of files in three categories:
 
 * Files that are completely untracked.
 
-[[gitguys]](http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/)
-[[git-scm]](http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository)
 
 Git commands
 ===
@@ -46,3 +67,9 @@ Using `--hard ` instead removes the changes in file aswell (ie modifies index).
 
 ### Undo last (pushed) commit
 `git revert HEAD` This will reverse the effects of an earlier commit (often a faulty one) and record a new commit. The faulty commit will remain in the log list.
+
+
+### References
+* http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/
+* http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository
+* http://www.gitguys.com/topics/head-where-are-we-where-were-we/
