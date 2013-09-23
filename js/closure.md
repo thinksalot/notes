@@ -262,7 +262,5 @@ MyObject.prototype.getMessage = function() {
 References:
 
 * http://benalman.com/news/2010/11/immediately-invoked-function-expression/
- 
 * http://ryanmorr.com/understanding-scope-and-context-in-javascript/
- 
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures
