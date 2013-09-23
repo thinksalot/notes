@@ -67,6 +67,9 @@ Using `--hard ` instead removes the changes in file aswell (ie modifies index).
 ### Undo last (pushed) commit
 `git revert HEAD` This will reverse the effects of an earlier commit (often a faulty one) and record a new commit. The faulty commit will remain in the log list.
 
+### Remove files from staging area
+`git reset HEAD file.txt` Reset index entries for `file.txt` to its state at `HEAD`, without touching working tree (ie all changes to the file since last commit remain intact). This is the opposite of doing `git add file.txt`
+
 
 ### References
 * http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/
