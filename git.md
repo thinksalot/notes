@@ -30,6 +30,8 @@ Index contains a list of files that will be added to the repository if you run `
 
 Running `git status` displays the contents of the index.
 
+Index reflects the state of files in `HEAD` **after** we commit.
+
 Before we commit files to the repository, we need to add files to the index using `git add`
 
 When we run `git status` we see a list of files in three categories:
@@ -68,10 +70,21 @@ Using `--hard ` instead removes the changes in file aswell (ie modifies index).
 `git revert HEAD` This will reverse the effects of an earlier commit (often a faulty one) and record a new commit. The faulty commit will remain in the log list.
 
 ### Remove files from staging area
-`git reset HEAD file.txt` Reset index entries for `file.txt` to its state at `HEAD`, without touching working tree (ie all changes to the file since last commit remain intact). This is the opposite of doing `git add file.txt`
 
+This is the opposite of doing `git add file.txt`
+
+1. If file is already tracked:
+
+   `git reset HEAD file.txt` Reset index entries for `file.txt` to its state at `HEAD`, without touching working tree (ie all changes to the file since last commit remain intact). 
+
+2. If file is **not tracked** but is staged:
+
+   `git rm --cached file.txt` Removes the file from index without touching the working directory. `rm file.txt` then removes the file from working directory
+
+   `git rm -f file.txt` Removes file from both index and working directory (ie combines the effect of two commands from above).
 
 ### References
 * http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/
 * http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository
 * http://www.gitguys.com/topics/head-where-are-we-where-were-we/
+* [Git wiki-Why git rm is not the inverse of git add](https://git.wiki.kernel.org/index.php/GitFaq#Why_is_.22git_rm.22_not_the_inverse_of_.22git_add.22.3F)
