@@ -15,14 +15,13 @@ ref: refs/heads/master
 $ cat .git/refs/heads/master
 eb7e1080e7843a7a2597e6643bde64cc19b50e4e
 ```
+We can view where `HEAD` had previously pointed to using: `git reflog`
 
 ### Working tree
 
 It is the state of files we are currently working on.
 
 Working tree is same as working directory.
-
-We can view where `HEAD` had previously pointed to using: `git reflog`
 
 ### Index
 Index is a staging area between working tree and the repository.
