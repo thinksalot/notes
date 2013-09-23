@@ -43,6 +43,19 @@ When we run `git status` we see a list of files in three categories:
 * Files that are completely untracked.
 
 
+### Checkout
+
+Checkout generally means to update files/paths.
+Depending upon supplied parameters, checkout performs two things:
+
+* It will switch to a particular branch:
+
+   When used as `git checkout <branch>`, it will update `HEAD` to the specified branch and also set that branch as the current branch
+
+* It will unmodify a modified file:
+
+   When used as `git checkout -- file.txt`, it will checkout file.txt out of index, any changes to the file is permanently lost. It effectively copies earlier commited version of the file in place of the modified one.
+
 Git commands
 ===
 
