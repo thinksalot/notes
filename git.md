@@ -50,11 +50,13 @@ Depending upon supplied parameters, checkout performs two things:
 
 * It will switch to a particular branch:
 
-   When used as `git checkout <branch>`, it will update `HEAD` to the specified branch and also set that branch as the current branch
+   When used as `git checkout <branch>`, it will update `HEAD` to the specified branch and also set that branch as the current branch. This action will effectively switch to a branch.
 
 * It will unmodify a modified file:
 
-   When used as `git checkout -- file.txt`, it will checkout file.txt out of index, any changes to the file is permanently lost. It effectively copies earlier commited version of the file in place of the modified one.
+   When used as `git checkout -- file.txt`, it will checkout file.txt out of index to the working directory, any changes to the file in working dir is permanently lost. It effectively copies staged file to in place of the one in working directory.
+
+   When used as `git checkout HEAD file.txt`, it will checkout file.txt out of `HEAD` to the index and working directory. Any changes to `file.txt` is permanently lost.
 
 Git commands
 ===
