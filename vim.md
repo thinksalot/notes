@@ -136,6 +136,10 @@ Deletes a tag, leaving behind only surrounding elements
 
 `:5,10norm! @a` which runs the macro stored in register `@a` from line `5` to `10` in normal mode. [[src]] (http://stackoverflow.com/a/390194)
 
+### Jumping locations:
+
+`Ctrl o` jumps backward to previous cursor location
+`Ctrl i` jumps forward to newer cursor location
 
 [Sparkup](https://github.com/rstacruz/sparkup):
 ===
