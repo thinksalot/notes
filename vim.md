@@ -141,6 +141,10 @@ Deletes a tag, leaving behind only surrounding elements
 `Ctrl o` jumps backward to previous cursor location
 `Ctrl i` jumps forward to newer cursor location
 
+### Text selection:
+
+See `:help text-objects`
+
 [Sparkup](https://github.com/rstacruz/sparkup):
 ===
 
