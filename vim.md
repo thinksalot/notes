@@ -153,6 +153,18 @@ See `:help text-objects`
 ### Expansion key: 
 `<Ctrl-e>`
 
+### Repeat an element n times
+
+`td*n` repeats the tag `n` time
+
+So pressing `td*3` and expansion key will produce:
+
+```html
+<td></td>
+<td></td>
+<td></td>
+```
+
 
 [Surround:](https://github.com/tpope/vim-surround)
 ===
