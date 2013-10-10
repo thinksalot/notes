@@ -1,6 +1,7 @@
 Git reference
 ===
 
+![](images/git-transport.png)
 ### HEAD
 
 `HEAD` is the reference to the most recent commit.In other words, `HEAD` is the parent of the next commit.
@@ -36,7 +37,7 @@ Before we commit files to the repository, we need to add files to the index usin
 
 When we run `git status` we see a list of files in three categories:
 
-* Files that have been added to the index (**staged**,by using `git add`)
+* Files that have been added to the index ( **staged**,by using `git add`)
 
 * Files that are tracked but not added to index.
 
