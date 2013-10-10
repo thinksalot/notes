@@ -141,7 +141,9 @@ Deletes a tag, leaving behind only surrounding elements
 `Ctrl o` jumps backward to previous cursor location
 `Ctrl i` jumps forward to newer cursor location
 
-### Text selection:
+### Paste over to inner contents:
+
+`vitp` Select content inside tag in visual mode and paste over (replace) earlier content to it.
 
 See `:help text-objects`
 
