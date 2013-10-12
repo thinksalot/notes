@@ -1,6 +1,45 @@
-A list of very useful commands after you are past the initial learning curve.
 
-General Vim:
+Grammar:
+===
+
+### Verbs
+- Indicate what you want to do ie actions you want to take
+  - **d** : Delete
+  - **c** : Change
+  - **v** : visual mode, **V** for visual line mode
+  - **y** : Yank (copy)
+
+### Modifiers
+- Modifers indicate how you want to take action.
+  - **i** : inside
+  - **a** : around
+  - **t** : till, finds a character and stops just before it
+  - **f** : find, finds a character and stop right on top of it
+  - **/** : find a string or use a regex (foward-slash)
+
+### Objects/Subjects
+- Represents object acted upon.
+  - **w** : word
+  - **s** : sentence or **)** 
+  - **p** : paragraph
+  - **b** : block/parentheses
+  - **t** : xhtml tags
+
+In vim (language), we can combine `verbs`+`modifiers`+`objects` to perform
+efficient actions in vim:
+
+- **diw** : delete inside word (inside means the word you are in)
+- **yis** : yank(copy) contents inside sentence
+- **cit** : change the contents inside tags
+- **ci"** : change inside quotes
+- **dat** : delete around tags
+- **yt'** : yank(copy) till(before) the **'** character
+- **c/<** : Change till the occurance of {
+- **vap** : Visually select tags you are in 
+- **vi{** : Select function blocks in c-style language
+
+
+Tips:
 ===
 
 ### Read help for a command
@@ -17,7 +56,7 @@ General Vim:
 
 `:tabedit file.html`
 
-### Cut and paste:
+### Cut and paste(visual mode):
 
 * Position the cursor where you want to begin cutting.
 * Press `v` (or upper case `V` if you want to cut whole lines).
@@ -25,6 +64,17 @@ General Vim:
 * Press `d`.
 * Move to where you would like to paste.
 * Press `p` to paste after the cursor, or `P` to paste before.
+
+### Copy using marks:
+1. Go to start location and set mark using `ma` where `a` is the marker.
+2. Then go to end location and type `y'a` to yank from line containing `a` to
+  the end location line(the line from where you rank the yank command).
+3. OR to yank to the precise point where mark was set, use `` ` `` instead
+  of `'`
+
+### Cut a paragraph:
+`{d}` : `{` moves to the start of paragraph,`d` starts deletion and `}` ends
+deletion at end of paragraph.
 
 ### Change case:
 * Enter visual mode
@@ -44,6 +94,7 @@ General Vim:
 ### Copy to clipboard:
 * `gg"*yG` - Copy whole file to clipboard
 * `"*y$` - Copy to the end of the line in clipboard
+
 
 ### Switch files:
 * `Ctrl-6` to switch between files
@@ -147,6 +198,15 @@ Deletes a tag, leaving behind only surrounding elements
 
 See `:help text-objects`
 
+### Moving within the screen(viewing area)
+- **M** : move to the middle of the screen
+- **L** : move to the end of the screen
+
+### References
+http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
+http://danielmiessler.com/study/vim/
+
+
 [Sparkup](https://github.com/rstacruz/sparkup):
 ===
 
@@ -156,7 +216,6 @@ See `:help text-objects`
 ### Repeat an element n times
 
 `td*n` repeats the tag `n` time
-
 So pressing `td*3` and expansion key will produce:
 
 ```html
