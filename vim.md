@@ -202,6 +202,12 @@ See `:help text-objects`
 - **M** : move to the middle of the screen
 - **L** : move to the end of the screen
 
+### Move to matching parentheses:
+- `%` : moves to matches parentheses `([{}])`
+
+### Indent code inside parentheses
+- `>%` or `<%`
+
 ### References
 http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
 http://danielmiessler.com/study/vim/
