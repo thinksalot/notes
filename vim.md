@@ -212,12 +212,19 @@ See `:help text-objects`
 ### Indent code inside parentheses
 - `>%` or `<%`
 
+### Read output from external command
+`:read !ls tests` writes output from `ls tests` to current buffer [[src]] (http://vim.wikia.com/wiki/Append_output_of_an_external_command)
+
+### Set working directory to the current file
+`autocmd BufEnter * lcd %:p:h` here `%` gives the name of the current file, `%:p` gives its full path, and `%:p:h` gives its directory (the "head" of the full path).
+[source](http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file)
+
 ### References
 http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
 http://danielmiessler.com/study/vim/
 
 
-[Sparkup](https://github.com/rstacruz/sparkup):
+## [Sparkup](https://github.com/rstacruz/sparkup):
 ===
 
 ### Expansion key: 
@@ -234,7 +241,7 @@ So pressing `td*3` and expansion key will produce:
 <td></td>
 ```
 
-[Surround:](https://github.com/tpope/vim-surround)
+## [Surround:](https://github.com/tpope/vim-surround)
 ===
 1. Select the letter, word or line in visual mode.
 2. Press `S`
