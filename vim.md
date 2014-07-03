@@ -191,6 +191,9 @@ Deletes a tag, leaving behind only surrounding elements
 
 `@@`
 
+### Run a macro n times:
+`10@e` Runs the macro stored in register `@e` 10 times
+
 ### Jumping locations:
 
 `Ctrl o` jumps backward to previous cursor location
