@@ -143,6 +143,12 @@ In insert more,`Ctrl-o` immediately followed by `A`
 
 `:%s/<c-r><c-w>/new value/g` where `<c-r><c-w>` means to literally type `<ctrl-r><ctrl-w>` to insert the word under the cursor.
 
+### Ignoring case in a pattern
+* When `\c` appears anywhere in a search pattern, the whole pattern is treated as case insentitive, as if using `set ignorecase`
+* When `\C` appears anywhere in a search pattern, the whole pattern is treated as case sensitive. It forces matching case for
+the whole pattern
+* See: `help /\c`
+
 ### Folds:
 * Disable using `:set nofoldenable`
 * `za` - toggles
