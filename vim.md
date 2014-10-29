@@ -228,6 +228,14 @@ See `:help text-objects`
 `autocmd BufEnter * lcd %:p:h` here `%` gives the name of the current file, `%:p` gives its full path, and `%:p:h` gives its directory (the "head" of the full path).
 [source](http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file)
 
+### Move current tab
+`tabm 0` moves current tab to the first position, `tabm 1` moves current tab to second position.
+In general `tabm N` moves tab to N position in a zero based index.
+
+`tabm +N` moves current tab `N` places to the right
+`tabm -N` moves current tab `N` places to the left
+
+
 ### References
 http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
 http://danielmiessler.com/study/vim/
