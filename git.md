@@ -81,6 +81,12 @@ Using `--hard ` instead removes the changes in file aswell (ie modifies index).
 ### Remove untracked files and directories:
 `git clean -fd` - `d` flag removes untracked directories in addition to untracked files, `f` means force , depends upon `clean.requireForce` config
 
+### [Ignore files after they were committed](http://stackoverflow.com/a/1139797)
+1. Add files to untrack to `.gitignore`
+2. Commit all outstanding changes
+3. Run `git rm -r --cached .` so that all ignored files are removed (from the index/staging area)
+4. `git add .` to add files
+5. `git commit -m 'removing untracked files'` to commit
 
 ### Undo last (pushed) commit
 `git revert HEAD` This will reverse the effects of an earlier commit (often a faulty one) and record a new commit. The faulty commit will remain in the log list.
