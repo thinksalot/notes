@@ -105,6 +105,9 @@ This is the opposite of doing `git add file.txt`
 
    `git rm -f file.txt` Removes file from both index and working directory (ie combines the effect of two commands from above).
 
+### Show a list of tracked files
+`git ls-tree -r master --name-only`
+
 ### References
 * http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/
 * http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository
