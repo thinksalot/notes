@@ -108,6 +108,17 @@ This is the opposite of doing `git add file.txt`
 ### [Show a list of tracked files](http://stackoverflow.com/a/15606995)
 `git ls-tree -r master --name-only`
 
+### Make a pull request [link](http://stackoverflow.com/a/21211375)
+- Fork repository
+- Clone repository to local maching using `git clone`
+- Start a new branch using `git checkout -b <branch>`
+- Make changes and commit
+- Push branch to github repo using `git push origin <branch>`
+- Go to forked repo in github, select <branch> and click on the 'create pull request' button
+
+### List branch configurations for push
+`git remove show origin`
+
 ### References
 * http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/
 * http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository
