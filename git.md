@@ -116,7 +116,7 @@ This is the opposite of doing `git add file.txt`
 - Push branch to github repo using `git push origin <branch>`
 - Go to forked repo in github, select <branch> and click on the 'create pull request' button
 
-### List branch configurations for push
+### List branch configurations for push [url](http://stackoverflow.com/a/2936751)
 `git remove show origin`
 
 ### References
